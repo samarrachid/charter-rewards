@@ -48,6 +48,11 @@ public class TransactionService {
         }
     }
 
+    /**
+     * Collect points per transaction amount
+     * @param transactionAmount
+     * @return
+     */
     private int calculatePointsForTransaction(double transactionAmount) {
         int points = 0;
         if (transactionAmount > 100) {
@@ -55,7 +60,6 @@ public class TransactionService {
         } else if (transactionAmount > 50) {
             points += 1 * (transactionAmount - 50);
         }
-
         return points;
     }
 }

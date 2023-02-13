@@ -22,6 +22,12 @@ public class RewardController {
         return customerService.customersWithPoints();
     }
 
+    /**
+     * Get a list of Customers' point in date rang
+     * @param startDate
+     * @param endDate
+     * @return
+     */
     @GetMapping("/points-by-month")
     public List<CustomerPoints> getPointsByMonth(
             @RequestParam("startDate") @DateTimeFormat(pattern = "yyyy-MM-dd") LocalDate startDate,

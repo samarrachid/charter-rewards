@@ -26,6 +26,6 @@ public class Customer {
 
     @OneToMany(mappedBy = "customer", cascade = CascadeType.ALL, fetch = FetchType.LAZY)
     @JsonIgnore
-    private List<Point> points;
+    private List<com.charter.rewards.vo.Point> points;
 
 }
